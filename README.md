@@ -36,3 +36,17 @@ To run the project locally:
 1. **Clone the repository** (or download it as a ZIP):
    ```bash
    git clone <repository-url>
+Navigate into the project folder:
+
+cd noteebooks
+
+
+Open with a local development server
+You can use any static server like Live Server in VS Code or http-server:
+
+npx http-server .
+
+
+Visit in your browser:
+
+http://localhost:8080
