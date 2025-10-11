@@ -1,4 +1,4 @@
-// ! Ay Dizisi
+//* Ay Dizisi
 const months = [
            "January",
            "February",
@@ -13,10 +13,6 @@ const months = [
            "November",
            "December",
 ];
-
-
-
-
 
 //*Elemanları js e çekk
 const addBox = document.querySelector(".add-box");
@@ -45,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
            renderNotes(notes);
 });
 
-
+//*Add new note butonuna tıklanıldığında popup ı göster
 addBox.addEventListener("click", () => {
            popupBoxContainer.classList.add("show");
            popupBox.classList.add("show");
@@ -73,7 +69,7 @@ closeBtn.addEventListener("click", () => {
            form.reset(); //formu resetler
 });
 
-// watch the form  bein submitted
+//*Form gönderildiğinde izle
 form.addEventListener("submit", (e) => {
 
            // formun sayfa yenilemesini engelle
@@ -92,7 +88,6 @@ form.addEventListener("submit", (e) => {
                       alert("Başlık ve açıklamadan herhangi biri boş bırakılamaz!");
                       return;  //*kodun devam etmesini engeller.
            }
-           console.log("form submitted");
 
            const date = new Date();
            const day = date.getDate();
@@ -156,7 +151,8 @@ form.addEventListener("submit", (e) => {
            // //*Locale Storage eleman ekleme
            // const users = ["Ayşe", "Adem", "Beril", "Oğulcan"];
            // localStorage.setItem("usersss", JSON.stringify(users));
-           // users bir dizi veya nesne olduğu için direkt olarak kaydedilemez.JSON.stringify onu string’e çevirir,
+           // users bir dizi veya nesne olduğu için direkt olarak kaydedilemez.
+           // JSON.stringify onu string’e çevirir,
 
            // //*localeStorage dan eleman çekme
            // console.log(JSON.parse(localStorage.getItem("usersss")));
@@ -196,16 +192,18 @@ function renderNotes(notes) {
                                  </div>
                       </li>`
 
-                      //*aşağıda addBox un hemen sonrasına ekle
-                      //*insertAdjacentHTML() metodu, belirli bir konuma HTML metni ekler.
+                      //!aşağıda addBox un hemen sonrasına ekle
+                      //!insertAdjacentHTML() metodu, belirli bir konuma HTML metni ekler.
                       addBox.insertAdjacentHTML("afterend", noteEleman);
            });
 }
 
 
 function showMenu(eleman) {
+           //! Elemanı hemen aşağıdaki Wrapper kısmında showMenu fonks.çağırılıyor
            //dışarıdan gelen elemanın  kapsayıcısına show clasını ekleme   "eleman =(e.target)"
-           eleman.parentElement.classList.add("show"); //!parentElement bir elemanın kapsayıcsına erişmek için settings kısmı
+           eleman.parentElement.classList.add("show");
+           //!parentElement bir elemanın kapsayıcsına erişmek için settings kısmı.
 
            //eklenen show clasını 3 nokta haricinde bir yere tıklanırsa kaldır
            //bunu buraya yazmamızın sebebi show clası eklendiğinde bu eventin aktif olması
@@ -220,6 +218,7 @@ function showMenu(eleman) {
 
 //!wrapper kısmındaki tıklamaları izle
 wrapper.addEventListener("click", (e) => {
+           console.log(e.target);
            //?eğer tıklanan eleman settings ise
            if (e.target.classList.contains("bx-dots-horizontal-rounded")) {
 
