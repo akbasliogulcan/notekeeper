@@ -5,7 +5,8 @@ All notes are stored in the browser’s **localStorage**, ensuring that your dat
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Demo:
+please click the link >>>>
 
 👉 [https://noteebooks.netlify.app/](https://noteebooks.netlify.app/)
 
